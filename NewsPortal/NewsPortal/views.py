@@ -13,7 +13,7 @@ class PostList(ListView):
     ordering = '-time_in'
     template_name = 'posts.html'
     context_object_name = 'posts'
-    paginate_by = 50
+    paginate_by = 3
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -25,7 +25,7 @@ class NewsList(ListView):
     model = Post
     template_name = 'news.html'
     context_object_name = 'news'
-    paginate_by = 50
+    paginate_by = 3
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -37,7 +37,7 @@ class ArticlesList(ListView):
     model = Post
     template_name = 'articles.html'
     context_object_name = 'articles'
-    paginate_by = 50
+    paginate_by = 3
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
